@@ -26,6 +26,7 @@ A full-stack placement preparation platform with AI-inspired analytics, coding p
    - app.ai.gemini-key (optional)
 2. Start the backend:
    - mvn spring-boot:run
+   - or on Windows: backend\mvnw.cmd spring-boot:run
 
 ### 3) Frontend
 1. Open frontend/index.html in a local dev server (Live Server or any static server).
