@@ -2,6 +2,11 @@
   const listEl = document.querySelector("[data-question-list]");
   const filters = document.querySelector("[data-filter-form]");
   const submissionForm = document.querySelector("[data-submission-form]");
+  const timerDisplay = document.querySelector("[data-timer-display]");
+  const timerStart = document.querySelector("[data-timer-start]");
+  const timerStop = document.querySelector("[data-timer-stop]");
+  let timerId = null;
+  let elapsedSeconds = 0;
 
   if (!listEl) return;
 
@@ -40,6 +45,30 @@
       if (difficulty) params.append("difficulty", difficulty);
       if (search) params.append("search", search);
       loadQuestions(`?${params.toString()}`);
+    });
+  }
+
+  function renderTimer() {
+    if (!timerDisplay) return;
+    const minutes = String(Math.floor(elapsedSeconds / 60)).padStart(2, "0");
+    const seconds = String(elapsedSeconds % 60).padStart(2, "0");
+    timerDisplay.textContent = `${minutes}:${seconds}`;
+  }
+
+  if (timerStart) {
+    timerStart.addEventListener("click", () => {
+      if (timerId) return;
+      timerId = setInterval(() => {
+        elapsedSeconds += 1;
+        renderTimer();
+      }, 1000);
+    });
+  }
+
+  if (timerStop) {
+    timerStop.addEventListener("click", () => {
+      clearInterval(timerId);
+      timerId = null;
     });
   }
 

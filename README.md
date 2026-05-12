@@ -45,6 +45,8 @@ A full-stack placement preparation platform with AI-inspired analytics, coding p
 - PUT /api/questions/{id} (admin)
 - DELETE /api/questions/{id} (admin)
 
+- GET /api/leaderboard
+
 - POST /api/submissions
 - GET /api/submissions
 

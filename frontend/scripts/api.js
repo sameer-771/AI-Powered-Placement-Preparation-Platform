@@ -104,6 +104,10 @@ window.AIPP = window.AIPP || {};
     return apiRequest("/admin/activity");
   }
 
+  function leaderboard() {
+    return apiRequest("/leaderboard");
+  }
+
   AIPP.api = {
     login,
     register,
@@ -118,6 +122,7 @@ window.AIPP = window.AIPP || {};
     interviewHistory,
     adminUsers,
     adminActivity,
+    leaderboard,
     clearToken,
   };
 })();

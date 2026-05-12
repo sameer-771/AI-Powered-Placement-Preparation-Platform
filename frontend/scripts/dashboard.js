@@ -2,6 +2,7 @@
   const summaryEl = document.querySelector("[data-dashboard-summary]");
   const chartEl = document.getElementById("weeklyChart");
   const counters = document.querySelectorAll("[data-counter]");
+  const leaderboardEl = document.querySelector("[data-leaderboard]");
 
   function animateCounters(values) {
     counters.forEach((counter) => {
@@ -73,4 +74,19 @@
     .catch((err) => {
       AIPP.ui.showToast(err.message || "Unable to load dashboard", "error");
     });
+
+  if (leaderboardEl) {
+    AIPP.api.leaderboard()
+      .then((entries) => {
+        leaderboardEl.innerHTML = "";
+        entries.forEach((entry) => {
+          const li = document.createElement("li");
+          li.textContent = `${entry.fullName} - ${entry.totalScore} pts`;
+          leaderboardEl.appendChild(li);
+        });
+      })
+      .catch(() => {
+        leaderboardEl.innerHTML = "<li>No leaderboard data</li>";
+      });
+  }
 })();
