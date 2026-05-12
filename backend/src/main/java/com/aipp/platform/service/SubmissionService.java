@@ -12,6 +12,7 @@ import com.aipp.platform.repository.SubmissionRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class SubmissionService {
@@ -41,6 +42,7 @@ public class SubmissionService {
         return toDto(saved);
     }
 
+    @Transactional(readOnly = true)
     public Page<SubmissionResponseDto> getHistory(User user, Pageable pageable) {
         return submissionRepository.findByUserOrderByCreatedAtDesc(user, pageable)
                 .map(this::toDto);

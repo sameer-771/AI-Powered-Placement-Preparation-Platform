@@ -9,6 +9,7 @@ import com.aipp.platform.repository.QuestionRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class QuestionService {
@@ -18,6 +19,7 @@ public class QuestionService {
         this.questionRepository = questionRepository;
     }
 
+    @Transactional(readOnly = true)
     public Page<QuestionResponseDto> listQuestions(Difficulty difficulty, String topic, String search, Pageable pageable) {
         return questionRepository.searchQuestions(difficulty, topic, search, pageable)
                 .map(this::toDto);

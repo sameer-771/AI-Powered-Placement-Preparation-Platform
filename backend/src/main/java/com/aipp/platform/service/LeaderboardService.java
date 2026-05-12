@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class LeaderboardService {
@@ -17,6 +18,7 @@ public class LeaderboardService {
         this.submissionRepository = submissionRepository;
     }
 
+    @Transactional(readOnly = true)
     public List<LeaderboardEntryDto> getLeaderboard() {
         Map<Long, LeaderboardEntryDto> aggregate = new HashMap<>();
         for (Submission submission : submissionRepository.findAll()) {
