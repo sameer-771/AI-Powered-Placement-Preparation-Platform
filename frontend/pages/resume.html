@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume AI | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="app-shell">
+    <aside class="side-rail">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>AIPP</span>
+      </div>
+      <div class="rail-title">Workspace</div>
+      <nav class="rail-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a class="active" href="resume.html">Resume AI</a>
+        <a href="interview.html">Interview AI</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </aside>
+
+    <main class="main-view">
+      <div class="dashboard-header">
+        <div>
+          <h2>Resume intelligence</h2>
+          <p>Upload or paste your resume to get ATS insights and missing skills.</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn ghost" data-theme-toggle>Toggle Theme</button>
+          <button class="btn" data-export-pdf>Export PDF</button>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="panel">
+          <h3>Analyze resume</h3>
+          <form data-resume-form>
+            <div class="form-field">
+              <label>Filename</label>
+              <input type="text" name="resumeFilename" placeholder="resume.pdf" />
+            </div>
+            <div class="form-field">
+              <label>Resume text</label>
+              <textarea name="resumeText" rows="10" placeholder="Paste resume content here" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Run analysis</button>
+          </form>
+        </div>
+        <div class="panel">
+          <h3>AI report</h3>
+          <div data-resume-output class="empty-state">Awaiting analysis</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/resume.js"></script>
+</body>
+</html>

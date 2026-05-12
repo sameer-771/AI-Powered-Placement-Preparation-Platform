@@ -4,7 +4,7 @@
 - [x] Clarify Project Requirements
 	<!-- Ask for project type, language, and frameworks if not specified. Skip if already provided. -->
 
-- [ ] Scaffold the Project
+- [x] Scaffold the Project
 	<!--
 	Ensure that the previous step has been marked as completed.
 	Call project setup tool with projectType parameter.
@@ -14,7 +14,7 @@
 	Otherwise, create the project structure manually using available file creation tools.
 	-->
 
-- [ ] Customize the Project
+- [x] Customize the Project
 	<!--
 	Verify that all previous steps have been completed successfully and you have marked the step as completed.
 	Develop a plan to modify codebase according to user requirements.

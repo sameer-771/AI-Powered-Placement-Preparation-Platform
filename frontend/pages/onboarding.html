@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboarding | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="container section">
+    <div class="section-title">
+      <h2>Build your placement plan</h2>
+      <p>Quick onboarding tailored to your target roles and interview timelines.</p>
+    </div>
+    <div class="split-grid">
+      <div class="panel">
+        <h3>Step 1: Target roles</h3>
+        <div class="form-field">
+          <label>Preferred role</label>
+          <input type="text" placeholder="Backend Engineer" />
+        </div>
+        <div class="form-field">
+          <label>Interview date</label>
+          <input type="date" />
+        </div>
+        <div class="form-field">
+          <label>Weekly target</label>
+          <select>
+            <option>6 problems</option>
+            <option>10 problems</option>
+            <option>15 problems</option>
+          </select>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Step 2: Focus areas</h3>
+        <div class="form-field">
+          <label>Primary skill focus</label>
+          <textarea rows="6" placeholder="System design, SQL, Java"></textarea>
+        </div>
+        <button class="btn primary" onclick="window.location.href='dashboard.html'">Launch workspace</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/app.js"></script>
+</body>
+</html>

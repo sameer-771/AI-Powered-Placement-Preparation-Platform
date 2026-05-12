@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="auth-shell">
+    <section class="auth-side">
+      <div>
+        <div class="brand">
+          <div class="logo"></div>
+          <span>AIPP Platform</span>
+        </div>
+        <h1>Create your placement workspace.</h1>
+        <p>Build a profile that keeps your growth visible to you and recruiters.</p>
+      </div>
+      <div class="empty-state">Illustration placeholder</div>
+    </section>
+    <section class="auth-card">
+      <h2>Get started</h2>
+      <p>One account to access resume AI, interviews, and coding practice.</p>
+      <form data-register-form>
+        <div class="form-field">
+          <label>Full name</label>
+          <input type="text" name="fullName" required />
+        </div>
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label>Password</label>
+          <input type="password" name="password" required />
+        </div>
+        <button class="btn primary" type="submit">Create account</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Sign in</a></p>
+    </section>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/auth.js"></script>
+</body>
+</html>

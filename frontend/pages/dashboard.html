@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="cmdk-backdrop">
+    <div class="cmdk">
+      <input type="text" placeholder="Jump to analytics, resume, interviews" />
+      <ul>
+        <li>Open Resume Analyzer</li>
+        <li>Start Mock Interview</li>
+        <li>View Admin Activity</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="app-shell">
+    <aside class="side-rail">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>AIPP</span>
+      </div>
+      <div class="rail-title">Workspace</div>
+      <nav class="rail-links">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a href="resume.html">Resume AI</a>
+        <a href="interview.html">Interview AI</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+      <div class="rail-title">Shortcuts</div>
+      <nav class="rail-links">
+        <a href="onboarding.html">Onboarding</a>
+        <a href="../index.html">Landing</a>
+      </nav>
+    </aside>
+
+    <main class="main-view">
+      <div class="dashboard-header">
+        <div>
+          <span class="badge">Live workspace</span>
+          <h2>Good evening, <span data-name>Candidate</span></h2>
+          <p data-streak>0 day streak</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn ghost" data-theme-toggle>Toggle Theme</button>
+          <button class="btn">Sync Progress</button>
+        </div>
+      </div>
+
+      <div class="dashboard-grid" data-dashboard-summary>
+        <div class="panel">
+          <h3 data-counter="solved">0</h3>
+          <p>Problems solved</p>
+        </div>
+        <div class="panel">
+          <h3 data-counter="total">0</h3>
+          <p>Total questions</p>
+        </div>
+        <div class="panel">
+          <h3 data-counter="streak">0</h3>
+          <p>Current streak</p>
+        </div>
+        <div class="panel wide">
+          <h3>Weekly Focus</h3>
+          <p data-weekly>0/0 this week</p>
+          <canvas id="weeklyChart" height="120"></canvas>
+        </div>
+        <div class="panel">
+          <h3>Activity feed</h3>
+          <ul class="activity-feed" data-activity>
+            <li class="skeleton"></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Consistency heatmap</h3>
+          <div class="heatmap">
+            <span class="intense"></span><span></span><span></span><span class="intense"></span>
+            <span></span><span></span><span></span><span></span><span></span><span class="intense"></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="panel full">
+          <h3>Guided milestones</h3>
+          <div class="timeline">
+            <div class="node">
+              <div class="dot"></div>
+              <div>
+                <strong>Resume audit</strong>
+                <p>Reach 80+ ATS score with quantified impact lines.</p>
+              </div>
+            </div>
+            <div class="node">
+              <div class="dot"></div>
+              <div>
+                <strong>Mock interview loop</strong>
+                <p>Two mock interviews per week, log feedback and reflect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="fab" title="Command palette">K</div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../scripts/dashboard.js"></script>
+</body>
+</html>

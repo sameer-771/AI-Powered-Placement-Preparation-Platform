@@ -1,0 +1,10 @@
+package com.aipp.platform.repository;
+
+import com.aipp.platform.model.InterviewFeedback;
+import com.aipp.platform.model.User;
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface InterviewFeedbackRepository extends JpaRepository<InterviewFeedback, Long> {
+    List<InterviewFeedback> findByUserOrderByCreatedAtDesc(User user);
+}

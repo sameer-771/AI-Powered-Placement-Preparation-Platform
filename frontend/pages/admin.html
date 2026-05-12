@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="app-shell">
+    <aside class="side-rail">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>AIPP</span>
+      </div>
+      <div class="rail-title">Workspace</div>
+      <nav class="rail-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a href="resume.html">Resume AI</a>
+        <a href="interview.html">Interview AI</a>
+        <a class="active" href="admin.html">Admin</a>
+      </nav>
+    </aside>
+
+    <main class="main-view">
+      <div class="dashboard-header">
+        <div>
+          <h2>Admin control center</h2>
+          <p>Monitor users, content, and platform activity.</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn ghost" data-theme-toggle>Toggle Theme</button>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="panel">
+          <h3>Users</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody data-users-table>
+              <tr>
+                <td colspan="4">Loading...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>Recent activity</h3>
+          <ul class="activity-feed" data-admin-activity>
+            <li class="skeleton"></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/admin.js"></script>
+</body>
+</html>

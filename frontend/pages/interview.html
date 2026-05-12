@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview AI | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="app-shell">
+    <aside class="side-rail">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>AIPP</span>
+      </div>
+      <div class="rail-title">Workspace</div>
+      <nav class="rail-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="practice.html">Practice</a>
+        <a href="resume.html">Resume AI</a>
+        <a class="active" href="interview.html">Interview AI</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </aside>
+
+    <main class="main-view">
+      <div class="dashboard-header">
+        <div>
+          <h2>AI interview studio</h2>
+          <p>Simulate mock or technical rounds and capture AI feedback.</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn ghost" data-theme-toggle>Toggle Theme</button>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div class="panel">
+          <h3>Start session</h3>
+          <form data-interview-form>
+            <div class="form-field">
+              <label>Interview type</label>
+              <select name="interviewType" required>
+                <option value="MOCK">Mock</option>
+                <option value="TECHNICAL">Technical</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Focus area</label>
+              <input type="text" name="focusArea" placeholder="System design" />
+            </div>
+            <div class="form-field">
+              <label>Notes</label>
+              <textarea name="notes" rows="6"></textarea>
+            </div>
+            <button class="btn primary" type="submit">Generate feedback</button>
+          </form>
+        </div>
+        <div class="panel">
+          <h3>Feedback</h3>
+          <div data-interview-output class="empty-state">Start an interview to see insights</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/interview.js"></script>
+</body>
+</html>

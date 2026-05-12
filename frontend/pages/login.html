@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="auth-shell">
+    <section class="auth-side">
+      <div>
+        <div class="brand">
+          <div class="logo"></div>
+          <span>AIPP Platform</span>
+        </div>
+        <h1>Welcome back to your placement command center.</h1>
+        <p>Track streaks, unlock insights, and keep momentum in one workspace.</p>
+      </div>
+      <div class="empty-state">Screenshot placeholder</div>
+    </section>
+    <section class="auth-card">
+      <h2>Sign in</h2>
+      <p>Access your metrics, reports, and interview coaching.</p>
+      <form data-login-form>
+        <div class="form-field">
+          <label>Email</label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label>Password</label>
+          <input type="password" name="password" required />
+        </div>
+        <button class="btn primary" type="submit">Login</button>
+        <button class="btn ghost" type="button" data-forgot-btn>Forgot password</button>
+      </form>
+      <p>New here? <a href="register.html">Create an account</a></p>
+    </section>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/auth.js"></script>
+</body>
+</html>

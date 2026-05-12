@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice | AIPP</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+</head>
+<body class="page">
+  <div class="app-shell">
+    <aside class="side-rail">
+      <div class="brand">
+        <div class="logo"></div>
+        <span>AIPP</span>
+      </div>
+      <div class="rail-title">Workspace</div>
+      <nav class="rail-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="practice.html">Practice</a>
+        <a href="resume.html">Resume AI</a>
+        <a href="interview.html">Interview AI</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </aside>
+
+    <main class="main-view">
+      <div class="dashboard-header">
+        <div>
+          <h2>Coding studio</h2>
+          <p>Filter by difficulty, run timed sessions, track submissions.</p>
+        </div>
+        <div class="cta-group">
+          <button class="btn ghost" data-theme-toggle>Toggle Theme</button>
+        </div>
+      </div>
+
+      <div class="split-grid">
+        <div>
+          <div class="panel">
+            <form data-filter-form>
+              <div class="form-field">
+                <label>Search</label>
+                <input type="text" name="search" placeholder="Binary search, SQL joins" />
+              </div>
+              <div class="form-field">
+                <label>Difficulty</label>
+                <select name="difficulty">
+                  <option value="">Any</option>
+                  <option value="EASY">Easy</option>
+                  <option value="MEDIUM">Medium</option>
+                  <option value="HARD">Hard</option>
+                </select>
+              </div>
+              <button class="btn primary" type="submit">Apply filters</button>
+            </form>
+          </div>
+          <div class="list-stack" data-question-list></div>
+        </div>
+        <div class="panel">
+          <h3>Submit solution</h3>
+          <form data-submission-form>
+            <div class="form-field">
+              <label>Question ID</label>
+              <input type="number" name="questionId" required />
+            </div>
+            <div class="form-field">
+              <label>Language</label>
+              <input type="text" name="language" placeholder="Java" required />
+            </div>
+            <div class="form-field">
+              <label>Time taken (seconds)</label>
+              <input type="number" name="timeTakenSeconds" value="0" />
+            </div>
+            <div class="form-field">
+              <label>Code</label>
+              <textarea name="codeText" rows="8" class="code-editor" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Save submission</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/practice.js"></script>
+</body>
+</html>
